@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="static/css/awesome.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <style>
+        .fa-step-backward:before {
+            content: "\f048";
+        }
+        .fa-pause:before {
+            content: "\f04c";
+        }
+        .fa-step-forward:before {
+            content: "\f051";
+        }
+    </style>
+</head>
+<body>
+    <div id="aka-wrapper">
+        <div class="aka-player-holder">
+            <div class="aka-player-thumb-wrapper">
+                <div class="aka-player-thumb" >
+                    <img src="" alt="" id="id-audio-cover">
+                </div>
+                <div class="aka-player-thumb-cover"></div>
+            </div>
+            <div class="aka-volume-wrapper">
+                <div class="aka-volume-toggle aka-contr-btn"><i class="fas fa-volume-up aka-icon-color"></i></div>
+                <div class="aka-volume-seekbar">
+                    <div class="aka-volume-bg"></div>
+                    <div class="aka-volume-level"><div class="aka-volume-drag"></div></div>
+                </div>
+
+            </div>
+            <div class="aka-random-toggle aka-contr-btn" data-tooltip="Shuffle">
+                <i class="fas fa-random aka-icon-color"></i>
+            </div>
+
+            <div class="aka-player-content">
+                <div class="aka-info">
+                    <p id="id-song-title"></p>
+                </div>
+                <div class="aka-seekbar">
+                    <div class="aka-progress-bg"></div>
+                    <div class="aka-load-level"></div>
+                    <div class="aka-progress-level"></div>
+
+                </div>
+                <div class="aka-player-controls">
+                    <div class="aka-prev-toggle aka-contr-btn"><i class="fas fa-step-backward aka-icon-color"></i></div>
+                    <div class="aka-playback-toggle aka-contr-btn"><i class="fas fa-pause aka-icon-color"></i></div>
+                    <div class="aka-next-toggle aka-contr-btn"><i class="fas fa-step-forward aka-icon-color"></i></div>
+
+                </div>
+            </div>
+            <audio id='id-audio-player'  data-mode="loop"></audio>
+
+        </div>
+        <div class="aka-playlist-holder">
+            <ul id='id-ul-song-list'></ul>
+        </div>
+        <div class="aka-tooltip" style=""><p>2:10 / 3:11</p></div>
+    </div>
+    <!-- ul 是用来放播放列表的 -->
+
+</body>
+<script>
+
+    window.nodeRequire = require
+
+    delete window.exports
+    delete window.module
+</script>
+<script src="static/player.js"></script>
+</html>
